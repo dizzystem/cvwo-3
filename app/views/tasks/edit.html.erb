@@ -1,0 +1,9 @@
+<h1>Edit Task</h1>
+
+<%= render 'form' %>
+ 
+<%= link_to 'Back', tasks_path, :class => "btn btn-danger" %>
+<%= link_to 'Delete', task_path(@task),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, 
+  :class => "btn btn-danger" %>

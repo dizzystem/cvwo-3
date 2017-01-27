@@ -1,0 +1,23 @@
+body {
+	font-family: Lucida Sans;
+  background-image: url(/assets/bg.png);
+}
+table {
+	padding: 10px;
+	border: 0px;
+	border-style: solid;
+	border-color: navy;
+}
+a {
+	color: #3333AA;
+}
+h1 {
+	padding: 10px 20px;
+	text-shadow: 1px 1px 1px #ccc;
+}
+h4 {
+	text-shadow: 1px 1px 1px #ccc;
+}
+p {
+	#padding: 10px 0px;
+}

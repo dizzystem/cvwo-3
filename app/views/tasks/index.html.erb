@@ -1,0 +1,14 @@
+<h1>Listing tasks</h1>
+<%= link_to 'New task', new_task_path, :class => "btn btn-default" %>
+ 
+<% @tasks.sort { |a,b| a.due_date <=> b.due_date }.each do |task| %>
+  <div class="panel panel-default">
+    <div class="panel-heading"><%= link_to (task.due_date + ": " + task.name), task_path(task) %> 
+      (<%= link_to 'Edit', edit_task_path(task) %>)</div>
+    <div class="panel-body"><%= task.text %></div>
+    <div class="panel-footer"><% task.tags.split(",").each do |tag| %>
+      <span class="well well-sm"><%= tag %></span>
+    <% end %></div>
+  </div>
+<% end %>
+<%= link_to 'Back', tasks_path, :class => "btn btn-default" %>
